@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Index</title>
+    <link rel="icon" type="image/png" href="https://user-images.githubusercontent.com/88244007/170831448-a7f1fde6-2da4-47b9-a253-9a95b32c7d7c.png">
+</head>
+<body>
+  
+  <!-- navigation bar -->
+  <div class ="container-fluid navbar-style py-2">
+    <div class="row">
+      <div class="col-md-10 col-12 mx-auto">  
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+          <div class="container-fluid">
+            <a class="navbar-brand" href="/">Spirit of Delhi</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" href="#family_outing">Family Outing</a>
+                </li>
+              </ul>
+              <form class="d-flex" action="/search" method="POST">
+                <input class="form-control" type="search" name="searchbox" placeholder="Search" aria-label="searchbox" required>              
+                <button class="btn btn-success mx-2" type="submit" style="font-size: 12px;">Search</button>                           
+              </form>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+
+  <div class ="container mt-5 d-flex" id="family_outing">
+    <div class="row text-centre">
+      <h2 class="mx-5" >FAMILY OUTINGS</h2>
+      <p class="mx-5">Here Are Few <span class="bold-style">Famous Family Outings</span> Of Delhi:</p>
+    </div>
+  </div>
+    
+  <ul class="cards">
+    for val, index in fam
+      if index < 4
+        <li>
+          <a href="#" class="card">
+            <img src="#{val.link}" class="card__image" alt="" />
+            <div class="card__overlay">
+              <div class="card__header">
+                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                <img class="card__thumb" src="#{val.link}" alt="" />
+                <div class="card__header-text">
+                  <h3>#{val.restaurant_name}</h3>            
+                  <span class="card_rating">Rating: #{val.dining_rating}</span>
+                </div>
+              </div> 
+              <p class="card__description">#{val.known_for2}</p>
+            </div>
+          </a>      
+        </li>
+    end    
+  </ul>
+
+
+  <script src="../js/bootstrap.js" type="text/javascript"></script>
+</body>
+</html>
